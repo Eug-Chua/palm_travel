@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Palm Travel</title>
+    <meta name="description" content="Get in touch with Palm Travel. Located at 15 Queen Street, Singapore. Call +65 6252 1788 or email contactus@palmtravel.com.sg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a7a6e',
+                        secondary: '#2d9b8a',
+                        accent: '#f4a261',
+                        dark: '#1a3a36',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #1a7a6e 0%, #2d9b8a 100%); }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(26, 122, 110, 0.92) 0%, rgba(45, 155, 138, 0.88) 100%),
+                        url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80') center/cover no-repeat;
+        }
+        .pattern-dots {
+            background-image: radial-gradient(rgba(26, 122, 110, 0.07) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-1">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo-palmtravel-new.jpg" alt="Palm Travel" class="h-12 sm:h-16 lg:h-24">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="leisure.html" class="text-gray-600 hover:text-primary transition">Leisure</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Contact Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="services.html" class="block py-2 text-gray-600 hover:text-primary">Services</a>
+                <a href="leisure.html" class="block py-2 text-gray-600 hover:text-primary">Leisure</a>
+                <a href="about.html" class="block py-2 text-gray-600 hover:text-primary">About</a>
+                <a href="contact.html" class="block py-2 text-primary font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-bg text-white py-12 sm:py-20 lg:py-28 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <span class="inline-block bg-white/10 text-white/90 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4 backdrop-blur-sm">
+                Get In Touch
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Contact Us</h1>
+            <p class="text-base sm:text-xl text-blue-100 max-w-2xl leading-relaxed">
+                Ready to discuss your travel needs? We're here to help.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-12 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-2xl font-bold text-dark mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
+                            <select id="service" name="service"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                                <option value="">Select a service...</option>
+                                <option value="crew-travel">Marine Crew Travel</option>
+                                <option value="corporate-travel">Corporate Travel</option>
+                                <option value="leisure">Corporate Retreats / Leisure</option>
+                                <option value="visa">Visa Assistance</option>
+                                <option value="other">Other / General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
+                                placeholder="Tell us about your travel requirements..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition flex items-center justify-center gap-2">
+                            <span>Send Message</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </button>
+                        <p class="text-xs text-gray-500 text-center">
+                            [Form placeholder - connect to Formspree, Netlify Forms, or backend]
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-2xl font-bold text-dark mb-6">Get in Touch</h2>
+
+                    <!-- Contact Cards -->
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Office Address</h4>
+                                <p class="text-gray-600">15 Queen Street, #03-09<br>Tan Chong Tower<br>Singapore 188537</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Phone</h4>
+                                <a href="tel:+6562521788" class="text-primary hover:underline">+65 6252 1788</a>
+                                <p class="text-gray-500 text-sm mt-1">24/7 for urgent crew travel</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <a href="mailto:contactus@palmtravel.com.sg" class="text-primary hover:underline">contactus@palmtravel.com.sg</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Office Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p class="text-gray-500 text-sm mt-1">Closed on weekends & public holidays</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-dark mb-6 text-center">Find Us</h2>
+            <div class="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7967479789897!2d103.84897731475395!3d1.2956538990539466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a340000001%3A0xdb2ba1f4a21c1d0d!2s15%20Queen%20St%2C%20Singapore%20188537!5e0!3m2!1sen!2ssg!4v1640000000000!5m2!1sen!2ssg"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full">
+                </iframe>
+            </div>
+            <div class="mt-4 text-center">
+                <a href="https://www.google.com/maps/dir//15+Queen+St,+Singapore+188537" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-primary hover:underline">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                    </svg>
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Bar -->
+    <section class="py-16 hero-bg relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <span class="inline-block bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium mb-4 backdrop-blur-sm">
+                        24/7 Emergency Support
+                    </span>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Need Immediate Assistance?</h3>
+                    <p class="text-blue-100 text-lg">For urgent crew travel bookings, call us directly.</p>
+                </div>
+                <a href="tel:+6562521788" class="group inline-flex items-center justify-center gap-2 bg-accent text-dark px-8 py-4 rounded-lg font-semibold hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    Call +65 6252 1788
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Palm Travel</h3>
+                    <p class="text-sm">
+                        Singapore's trusted travel partner for the marine industry since 1989.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="leisure.html" class="hover:text-white transition">Leisure</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>15 Queen Street, #03-09</li>
+                        <li>Tan Chong Tower</li>
+                        <li>Singapore 188537</li>
+                        <li class="pt-2">+65 6252 1788</li>
+                        <li>contactus@palmtravel.com.sg</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Credentials</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>IATA Accredited Agent</li>
+                        <li>NATAS Member</li>
+                        <li>STB Licensed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2024 Palm Travel Pte Ltd & Palm Marine Travel Pte Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Placeholder -->
+    <div id="chatbot-toggle" class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleChatbot()" class="bg-primary text-white w-14 h-14 rounded-full shadow-lg hover:bg-secondary transition flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-xl shadow-2xl z-50 overflow-hidden">
+        <div class="bg-primary text-white p-4 flex justify-between items-center">
+            <div>
+                <h4 class="font-semibold">Palm Travel Assistant</h4>
+                <p class="text-xs text-blue-200">We typically reply instantly</p>
+            </div>
+            <button onclick="toggleChatbot()" class="text-white hover:text-blue-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="h-64 p-4 bg-gray-50 overflow-y-auto">
+            <div class="bg-white p-3 rounded-lg shadow-sm mb-3">
+                <p class="text-sm text-gray-700">Hi! 👋 How can I help you today?</p>
+            </div>
+            <div class="text-center text-xs text-gray-400 mt-4">
+                [Chatbot placeholder - connect to actual service]
+            </div>
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary">
+                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

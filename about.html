@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Palm Travel</title>
+    <meta name="description" content="Learn about Palm Travel - Singapore's trusted marine travel partner since 1989. IATA accredited, NATAS member, STB licensed.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a7a6e',
+                        secondary: '#2d9b8a',
+                        accent: '#f4a261',
+                        dark: '#1a3a36',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #1a7a6e 0%, #2d9b8a 100%); }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(26, 122, 110, 0.92) 0%, rgba(45, 155, 138, 0.88) 100%),
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=80') center/cover no-repeat;
+        }
+        .pattern-dots {
+            background-image: radial-gradient(rgba(26, 122, 110, 0.07) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-1">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo-palmtravel-new.jpg" alt="Palm Travel" class="h-12 sm:h-16 lg:h-24">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="leisure.html" class="text-gray-600 hover:text-primary transition">Leisure</a>
+                    <a href="about.html" class="text-primary font-medium">About</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Contact Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="services.html" class="block py-2 text-gray-600 hover:text-primary">Services</a>
+                <a href="leisure.html" class="block py-2 text-gray-600 hover:text-primary">Leisure</a>
+                <a href="about.html" class="block py-2 text-primary font-medium">About</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-bg text-white py-12 sm:py-20 lg:py-28 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <span class="inline-block bg-white/10 text-white/90 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4 backdrop-blur-sm">
+                Our Story
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">About Us</h1>
+            <p class="text-base sm:text-xl text-blue-100 max-w-2xl leading-relaxed">
+                35+ years of trusted service to Singapore's maritime community.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-12 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-dark mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">
+                        <strong>Palm Travel Pte Ltd</strong> was established in 1989, during Singapore's growth as a global maritime hub. For over three decades, we've served the travel needs of shipping companies, marine operators, and maritime professionals.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        In 2017, we expanded with <strong>Palm Marine Travel Pte Ltd</strong> to better serve the specialized needs of marine crew travel - managing complex itineraries for seafarers joining and leaving vessels across the world.
+                    </p>
+                    <p class="text-gray-600">
+                        Today, we operate as two complementary businesses: Palm Travel handles corporate and executive travel, while Palm Marine Travel focuses on crew rotations and marine operations. Together, we offer complete travel solutions for the maritime industry.
+                    </p>
+                </div>
+                <div>
+                    <div class="rounded-2xl h-80 overflow-hidden relative">
+                        <img src="images/our_story.jpg" alt="Palm Travel Team" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-12 text-center">Our Journey</h2>
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
+
+                <!-- Timeline items -->
+                <div class="space-y-12">
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <h4 class="font-bold text-primary">1989</h4>
+                            <p class="text-gray-600">Palm Travel Pte Ltd established in Singapore</p>
+                        </div>
+                        <div class="w-4 h-4 bg-primary rounded-full z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-4 h-4 bg-primary rounded-full z-10"></div>
+                        <div class="flex-1 text-left pl-8">
+                            <h4 class="font-bold text-primary">1995</h4>
+                            <p class="text-gray-600">Achieved IATA accreditation</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <h4 class="font-bold text-primary">2005</h4>
+                            <p class="text-gray-600">Expanded into marine crew travel services</p>
+                        </div>
+                        <div class="w-4 h-4 bg-primary rounded-full z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-4 h-4 bg-primary rounded-full z-10"></div>
+                        <div class="flex-1 text-left pl-8">
+                            <h4 class="font-bold text-primary">2017</h4>
+                            <p class="text-gray-600">Palm Marine Travel Pte Ltd established</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <h4 class="font-bold text-primary">Today</h4>
+                            <p class="text-gray-600">35+ years serving the maritime community</p>
+                        </div>
+                        <div class="w-4 h-4 bg-accent rounded-full z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Companies -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-12 text-center">Two Companies, One Mission</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Palm Travel Pte Ltd</h3>
+                    <p class="text-gray-500 text-sm mb-4">Established 1989</p>
+                    <p class="text-gray-600 mb-4">
+                        Our original company, focused on corporate travel, executive bookings, and leisure packages for the maritime industry.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Corporate travel management
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Executive leisure retreats
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Business class bookings
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Palm Marine Travel Pte Ltd</h3>
+                    <p class="text-gray-500 text-sm mb-4">Established 2017</p>
+                    <p class="text-gray-600 mb-4">
+                        Dedicated to the specialized needs of marine crew travel - handling complex global itineraries for seafarers.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Crew rotation worldwide
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Multi-leg itineraries
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            24/7 urgent bookings
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-4 text-center">Our Credentials</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                We maintain the highest industry standards and accreditations.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm">
+                    <div class="h-16 flex items-center justify-center mx-auto mb-6">
+                        <img src="images/iata-logo.svg" alt="IATA Logo" class="h-20 object-contain">
+                    </div>
+                    <h4 class="font-semibold mb-2">IATA Accredited Agent</h4>
+                    <p class="text-gray-600 text-sm">
+                        Recognized by the International Air Transport Association for meeting strict financial and professional standards.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm">
+                    <div class="h-16 flex items-center justify-center mx-auto mb-6">
+                        <img src="images/natas-logo.png" alt="NATAS Logo" class="h-14 object-contain">
+                    </div>
+                    <h4 class="font-semibold mb-2">NATAS Member</h4>
+                    <p class="text-gray-600 text-sm">
+                        Member of the National Association of Travel Agents Singapore, upholding industry best practices.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl p-8 text-center shadow-sm">
+                    <div class="h-16 flex items-center justify-center mx-auto mb-6">
+                        <img src="images/stb-logo.svg" alt="STB Logo" class="h-14 object-contain">
+                    </div>
+                    <h4 class="font-semibold mb-2">STB Licensed</h4>
+                    <p class="text-gray-600 text-sm">
+                        Licensed by the Singapore Tourism Board, ensuring compliance with local regulations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark mb-12 text-center">What We Stand For</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">Reliability</h4>
+                    <p class="text-gray-600 text-sm">We deliver on our promises, every time.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">Responsiveness</h4>
+                    <p class="text-gray-600 text-sm">Fast action when you need it most.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">Relationships</h4>
+                    <p class="text-gray-600 text-sm">We build long-term partnerships.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold mb-2">Expertise</h4>
+                    <p class="text-gray-600 text-sm">Deep knowledge of maritime travel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 hero-bg relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+                Partner With Us
+            </span>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">Let's Work Together</h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Experience the Palm Travel difference. Contact us to discuss your travel needs.
+            </p>
+            <a href="contact.html" class="group inline-flex items-center justify-center gap-2 bg-accent text-dark px-8 py-4 rounded-lg font-semibold hover:bg-white hover:shadow-lg transition-all duration-300">
+                Get in Touch
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Palm Travel</h3>
+                    <p class="text-sm">
+                        Singapore's trusted travel partner for the marine industry since 1989.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="leisure.html" class="hover:text-white transition">Leisure</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>15 Queen Street, #03-09</li>
+                        <li>Tan Chong Tower</li>
+                        <li>Singapore 188537</li>
+                        <li class="pt-2">+65 6252 1788</li>
+                        <li>contactus@palmtravel.com.sg</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Credentials</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>IATA Accredited Agent</li>
+                        <li>NATAS Member</li>
+                        <li>STB Licensed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2024 Palm Travel Pte Ltd & Palm Marine Travel Pte Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Placeholder -->
+    <div id="chatbot-toggle" class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleChatbot()" class="bg-primary text-white w-14 h-14 rounded-full shadow-lg hover:bg-secondary transition flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-xl shadow-2xl z-50 overflow-hidden">
+        <div class="bg-primary text-white p-4 flex justify-between items-center">
+            <div>
+                <h4 class="font-semibold">Palm Travel Assistant</h4>
+                <p class="text-xs text-blue-200">We typically reply instantly</p>
+            </div>
+            <button onclick="toggleChatbot()" class="text-white hover:text-blue-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="h-64 p-4 bg-gray-50 overflow-y-auto">
+            <div class="bg-white p-3 rounded-lg shadow-sm mb-3">
+                <p class="text-sm text-gray-700">Hi! 👋 How can I help you today?</p>
+            </div>
+            <div class="text-center text-xs text-gray-400 mt-4">
+                [Chatbot placeholder - connect to actual service]
+            </div>
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary">
+                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

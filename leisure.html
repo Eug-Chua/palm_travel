@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Retreats | Palm Travel</title>
+    <meta name="description" content="Executive retreats and corporate leisure packages for the maritime industry. Golf, team building, and business networking.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a7a6e',
+                        secondary: '#2d9b8a',
+                        accent: '#f4a261',
+                        dark: '#1a3a36',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #1a7a6e 0%, #2d9b8a 100%); }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(26, 122, 110, 0.92) 0%, rgba(45, 155, 138, 0.88) 100%),
+                        url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1920&q=80') center/cover no-repeat;
+        }
+        .pattern-dots {
+            background-image: radial-gradient(rgba(26, 122, 110, 0.07) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-1">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo-palmtravel-new.jpg" alt="Palm Travel" class="h-12 sm:h-16 lg:h-24">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="leisure.html" class="text-primary font-medium">Leisure</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Contact Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="services.html" class="block py-2 text-gray-600 hover:text-primary">Services</a>
+                <a href="leisure.html" class="block py-2 text-primary font-medium">Leisure</a>
+                <a href="about.html" class="block py-2 text-gray-600 hover:text-primary">About</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-bg text-white py-12 sm:py-20 lg:py-28 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <span class="inline-block bg-white/10 text-white/90 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4 backdrop-blur-sm">
+                Executive Experiences
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Corporate Retreats</h1>
+            <p class="text-base sm:text-xl text-blue-100 max-w-2xl leading-relaxed">
+                Executive leisure experiences that blend business with pleasure. Designed for maritime industry leaders.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Offering -->
+    <section class="py-12 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
+                        Featured Program
+                    </div>
+                    <h2 class="text-3xl font-bold text-dark mb-6">Corporate Business Leisure Retreat</h2>
+                    <p class="text-gray-600 mb-6">
+                        A curated multi-day experience designed for maritime executives and their teams. Combine strategic business sessions with world-class leisure activities in stunning resort destinations.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Whether you're looking to reward your team, strengthen client relationships, or host a leadership offsite, we handle every detail so you can focus on what matters.
+                    </p>
+                    <a href="contact.html" class="inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition">
+                        Inquire About Retreats
+                    </a>
+                </div>
+                <div>
+                    <div class="rounded-2xl h-96 overflow-hidden relative">
+                        <img src="images/Corporate Business Leisure Retreat .jpg" alt="Corporate Business Leisure Retreat" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="py-20 bg-gray-50 pattern-dots">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Retreat Inclusions</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-dark mt-2 mb-4">What's Included</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Every retreat is customized to your objectives. Here's what a typical program includes.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Golf -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/golf-tournament.jpg" alt="Golf Tournament" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Golf Tournament</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Friendly competition on championship courses. A proven format for relationship building and networking among executives.
+                        </p>
+                    </div>
+                </div>
+                <!-- Business Sessions -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/meeting-room.jpg" alt="Business Meeting Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Business Activities</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Interactive sessions on leadership, market trends, or team strategy. Tailored to your company's goals and industry focus.
+                        </p>
+                    </div>
+                </div>
+                <!-- Leisure -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/resort-amenities.jpg" alt="Resort Amenities" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Relaxation & Leisure</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Resort amenities, fine dining, spa treatments, and optional activities like hiking or cultural tours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Corporate Retreats -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="rounded-2xl h-80 overflow-hidden relative">
+                        <img src="images/teambuilding.jpg" alt="Team Networking" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Why Corporate Retreats?</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-dark font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Strengthen Relationships</h4>
+                                <p class="text-gray-600">Build deeper connections with clients, partners, and team members outside the office environment.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-dark font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Reward Performance</h4>
+                                <p class="text-gray-600">Recognize top performers and boost morale with memorable experiences.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-dark font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Strategic Planning</h4>
+                                <p class="text-gray-600">Get away from daily distractions to focus on big-picture thinking and planning.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-dark font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Industry Networking</h4>
+                                <p class="text-gray-600">Connect with peers in the maritime industry in a relaxed, professional setting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Destinations -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">Popular Destinations</h2>
+                <p class="text-gray-600">We arrange retreats across Asia and beyond. Some favorites:</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="h-40 overflow-hidden relative">
+                        <img src="images/bali.jpg" alt="Bali, Indonesia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold">Bali, Indonesia</h4>
+                        <p class="text-sm text-gray-500">Resorts & culture</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="h-40 overflow-hidden relative">
+                        <img src="images/phuket.jpg" alt="Phuket, Thailand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold">Phuket, Thailand</h4>
+                        <p class="text-sm text-gray-500">Golf & beaches</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="h-40 overflow-hidden relative">
+                        <img src="images/bintan.jpg" alt="Bintan, Indonesia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold">Bintan, Indonesia</h4>
+                        <p class="text-sm text-gray-500">Near Singapore</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="h-40 overflow-hidden relative">
+                        <img src="images/vietnam.jpg" alt="Da Nang, Vietnam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 pointer-events-none"></div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold">Da Nang, Vietnam</h4>
+                        <p class="text-sm text-gray-500">Golf resorts</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-8 text-sm">
+                Don't see your preferred destination? We can arrange retreats anywhere.
+            </p>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-4">How It Works</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">1</div>
+                    <h4 class="font-semibold mb-2">Consultation</h4>
+                    <p class="text-gray-600 text-sm">Tell us your objectives, group size, and preferences</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">2</div>
+                    <h4 class="font-semibold mb-2">Proposal</h4>
+                    <p class="text-gray-600 text-sm">We design a custom itinerary and provide a quote</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">3</div>
+                    <h4 class="font-semibold mb-2">Coordination</h4>
+                    <p class="text-gray-600 text-sm">We handle all bookings, logistics, and arrangements</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">4</div>
+                    <h4 class="font-semibold mb-2">Experience</h4>
+                    <p class="text-gray-600 text-sm">You enjoy the retreat - we manage the details</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 hero-bg relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+                Ready to Get Started?
+            </span>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">Plan Your Next Corporate Retreat</h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Let us create an unforgettable experience for your team or clients.
+            </p>
+            <a href="contact.html" class="group inline-flex items-center justify-center gap-2 bg-accent text-dark px-8 py-4 rounded-lg font-semibold hover:bg-white hover:shadow-lg transition-all duration-300">
+                Start Planning
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Palm Travel</h3>
+                    <p class="text-sm">
+                        Singapore's trusted travel partner for the marine industry since 1989.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="leisure.html" class="hover:text-white transition">Leisure</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>15 Queen Street, #03-09</li>
+                        <li>Tan Chong Tower</li>
+                        <li>Singapore 188537</li>
+                        <li class="pt-2">+65 6252 1788</li>
+                        <li>contactus@palmtravel.com.sg</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Credentials</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>IATA Accredited Agent</li>
+                        <li>NATAS Member</li>
+                        <li>STB Licensed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2024 Palm Travel Pte Ltd & Palm Marine Travel Pte Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Placeholder -->
+    <div id="chatbot-toggle" class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleChatbot()" class="bg-primary text-white w-14 h-14 rounded-full shadow-lg hover:bg-secondary transition flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-xl shadow-2xl z-50 overflow-hidden">
+        <div class="bg-primary text-white p-4 flex justify-between items-center">
+            <div>
+                <h4 class="font-semibold">Palm Travel Assistant</h4>
+                <p class="text-xs text-blue-200">We typically reply instantly</p>
+            </div>
+            <button onclick="toggleChatbot()" class="text-white hover:text-blue-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="h-64 p-4 bg-gray-50 overflow-y-auto">
+            <div class="bg-white p-3 rounded-lg shadow-sm mb-3">
+                <p class="text-sm text-gray-700">Hi! 👋 How can I help you today?</p>
+            </div>
+            <div class="text-center text-xs text-gray-400 mt-4">
+                [Chatbot placeholder - connect to actual service]
+            </div>
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex gap-2">
+                <input type="text" placeholder="Type a message..." class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary">
+                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
