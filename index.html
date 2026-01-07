@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palm Travel | Marine & Corporate Travel Solutions</title>
     <meta name="description" content="Singapore's trusted travel partner for the marine industry since 1989. Crew travel, corporate bookings, and executive retreats.">
+    <link rel="icon" type="image/jpeg" href="logo-palmtravel-new.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,8 +29,28 @@
         body { font-family: 'Inter', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, #1a7a6e 0%, #2d9b8a 100%); }
         .hero-bg {
-            background: linear-gradient(135deg, rgba(26, 122, 110, 0.92) 0%, rgba(45, 155, 138, 0.88) 100%),
-                        url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+        }
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-slide.active {
+            opacity: 1;
+        }
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 122, 110, 0.85) 0%, rgba(45, 155, 138, 0.75) 100%);
+        }
+        .cta-bg {
+            background: linear-gradient(135deg, rgba(26, 122, 110, 0.85) 0%, rgba(45, 155, 138, 0.75) 100%),
+                        url('images/ship.jpg') center/cover no-repeat;
         }
         .pattern-dots {
             background-image: radial-gradient(rgba(26, 122, 110, 0.07) 1px, transparent 1px);
@@ -82,8 +103,13 @@
 
     <!-- Hero Section -->
     <section class="hero-bg text-white py-16 sm:py-24 lg:py-40 relative overflow-hidden">
+        <!-- Rotating background images -->
+        <div class="hero-slide active" style="background-image: url('images/ship.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/ship-2.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/oil-rig.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/oil-rig2.jpg')"></div>
         <!-- Subtle animated shapes -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none z-10">
             <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
         </div>
@@ -149,7 +175,7 @@
     <section class="py-8 sm:py-12 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-3 md:grid-cols-5 gap-3 sm:gap-6 md:gap-4">
-                <div class="group flex flex-col items-center p-3 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                <div class="group flex-col items-center p-3 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors hidden md:flex">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
                         <span class="text-lg sm:text-2xl font-bold text-primary">35+</span>
                     </div>
@@ -170,14 +196,14 @@
                     <p class="text-xs sm:text-sm font-medium text-gray-800 text-center">Member</p>
                     <p class="text-xs text-gray-500 hidden sm:block">Singapore</p>
                 </div>
-                <div class="group flex flex-col items-center p-3 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors hidden md:flex">
+                <div class="group flex flex-col items-center p-3 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors">
                     <div class="mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
                         <img src="images/stb-logo.svg" alt="STB Logo" class="h-10 sm:h-12 object-contain">
                     </div>
                     <p class="text-xs sm:text-sm font-medium text-gray-800 text-center">Licensed</p>
                     <p class="text-xs text-gray-500 hidden sm:block">Tourism Board</p>
                 </div>
-                <div class="group flex flex-col items-center p-3 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors hidden md:flex">
+                <div class="group flex-col items-center p-3 sm:p-6 rounded-xl hover:bg-gray-50 transition-colors hidden md:flex">
                     <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
                         <span class="text-lg sm:text-2xl font-bold text-accent">24/7</span>
                     </div>
@@ -352,7 +378,7 @@
     </section>
 
     <!-- Client Logos -->
-    <section class="py-12 sm:py-20 bg-gray-50 pattern-grid">
+    <section class="py-12 sm:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 sm:mb-12">
                 <span class="text-primary font-semibold text-sm uppercase tracking-wider">Our Partners</span>
@@ -380,7 +406,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 sm:py-24 hero-bg relative overflow-hidden">
+    <section class="py-16 sm:py-24 cta-bg relative overflow-hidden">
         <!-- Decorative elements -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
@@ -499,5 +525,18 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        // Hero slideshow
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+
+        function rotateSlides() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(rotateSlides, 5000); // Change every 5 seconds
+    </script>
 </body>
 </html>
